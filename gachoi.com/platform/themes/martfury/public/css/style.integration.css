@@ -1,0 +1,6 @@
+.ps-footer__widgets {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0px ;
+  	background: whitesmoke;
+}

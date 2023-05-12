@@ -130,6 +130,7 @@ class ProductForm extends FormAbstract
                 'label_attr'    => ['class' => 'control-label'],
                 'default_value' => false,
             ])
+
             ->add('categories[]', 'categoryMulti', [
                 'label'      => trans('plugins/ecommerce::products.form.categories'),
                 'label_attr' => ['class' => 'control-label'],
@@ -181,6 +182,24 @@ class ProductForm extends FormAbstract
                 ],
             ])
             ->setBreakFieldPoint('status');
+        if (is_plugin_active('family-tree')) {
+            $this
+                ->removeMetaBox('family-tree')
+                ->addMetaBoxes([
+                    'family-tree'    => [
+                        'title'          => trans('Gia phả'),
+                        'content'        => view('plugins/family-tree::partials.create',
+                            [
+                                'product'     => $productId ? $this->getModel() : null,
+                            ])
+                            ->render(),
+                        'before_wrapper' => '<div id="main-family-tree">',
+                        'after_wrapper' => '</div>',
+                        'priority'       => 10,
+                    ]
+                ]);
+        }
+
 
         if (empty($productVariations) || $productVariations->isEmpty()) {
             $attributeSetId = $productAttributeSets->first() ? $productAttributeSets->first()->id : 0;

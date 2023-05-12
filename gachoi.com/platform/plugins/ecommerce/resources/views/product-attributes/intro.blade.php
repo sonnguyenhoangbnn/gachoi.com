@@ -1,6 +1,6 @@
 @extends(BaseHelper::getAdminMasterLayoutTemplate())
 @section('content')
-    <div class="flexbox-grid">
+        <div class="flexbox-grid">
         <div class="flexbox-content">
             <div class="body">
                 <div class="box-wrap-emptyTmpl text-center col-12">

@@ -53,6 +53,10 @@ class StoreProductService
                 'wide',
                 'height',
                 'weight',
+                'gender_id',
+                'mother_id',
+                'father_id',
+                'parent_id'
             ]);
         }
 

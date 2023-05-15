@@ -182,42 +182,48 @@
                             </div>
                         </div>
 
+                        @if(is_plugin_active('family-tree'))
+
                             <div class="row1">
                                 <h1>Thông tin gen duy truyền</h1>
                                 <div class="tree">
                                     <ul>
-                                        <li> <a href="#"><span>Child</span></a>
-                                            <ul>
-                                                <li><a href="#"><span>Grand Child</span></a>
-                                                    <ul>
-                                                        <li> <a href="#"><span>Great Grand Child</span></a> </li>
-                                                        <li> <a href="#"><span>Great Grand Child</span></a>
-                                                            <ul>
-                                                                <li> <a href="#"><span>Great Grand Child 01</span></a> </li>
-                                                                <li> <a href="#"><span>Great Grand Child 02</span></a> </li>
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                                <li> <a href="#"><span>Grand Child</span></a>
-                                                    <ul>
-                                                        <li> <a href="#"><span>Great Grand Child</span></a> </li>
-                                                        <li> <a href="#"><span>Great Grand Child</span></a> </li>
-                                                        <li> <a href="#"><span>Great Grand Child</span></a> </li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#"><span>Grand Child</span></a>
-                                                    <ul>
-                                                        <li> <a href="#"><span>Great Grand Child</span></a> </li>
-                                                        <li> <a href="#"><span>Great Grand Child</span></a> </li>
+                                        <li> <a href="{{ $product->url }}"><img src="{{ RvMedia::getImageUrl($product->image, 'thumb', false, RvMedia::getDefaultImage()) }}"/><span>{{$product->name}}</span></a>
+                                            @php
+                                                echo do_shortcode("[family-tree]{$product->id}[/family-tree]")
+                                            @endphp
+                                            {{--                                            <ul>--}}
+                                            {{--                                                <li><a href="#"><span>Grand Child</span></a>--}}
+                                            {{--                                                    <ul>--}}
+                                            {{--                                                        <li> <a href="#"><span>Great Grand Child</span></a> </li>--}}
+                                            {{--                                                        <li> <a href="#"><span>Great Grand Child</span></a>--}}
+                                            {{--                                                            <ul>--}}
+                                            {{--                                                                <li> <a href="#"><span>Great Grand Child 01</span></a> </li>--}}
+                                            {{--                                                                <li> <a href="#"><span>Great Grand Child 02</span></a> </li>--}}
+                                            {{--                                                            </ul>--}}
+                                            {{--                                                        </li>--}}
+                                            {{--                                                    </ul>--}}
+                                            {{--                                                </li>--}}
+                                            {{--                                                <li> <a href="#"><span>Grand Child</span></a>--}}
+                                            {{--                                                    <ul>--}}
+                                            {{--                                                        <li> <a href="#"><span>Great Grand Child</span></a> </li>--}}
+                                            {{--                                                        <li> <a href="#"><span>Great Grand Child</span></a> </li>--}}
+                                            {{--                                                        <li> <a href="#"><span>Great Grand Child</span></a> </li>--}}
+                                            {{--                                                    </ul>--}}
+                                            {{--                                                </li>--}}
+                                            {{--                                                <li><a href="#"><span>Grand Child</span></a>--}}
+                                            {{--                                                    <ul>--}}
+                                            {{--                                                        <li> <a href="#"><span>Great Grand Child</span></a> </li>--}}
+                                            {{--                                                        <li> <a href="#"><span>Great Grand Child</span></a> </li>--}}
 
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                            {{--                                                    </ul>--}}
+                                            {{--                                                </li>--}}
+                                            {{--                                            </ul>--}}
                                         </li>
                                     </ul>
                                 </div>
                             </div>
+                        @endif
 
 
 

@@ -1,0 +1,9 @@
+{
+    "name": "family-tree",
+    "namespace": "Botble\\FamilyTree\\",
+    "provider": "Botble\\FamilyTree\\Providers\\FamilyTreeServiceProvider",
+    "author": "Botble Technologies",
+    "url": "https://botble.com",
+    "version": "1.0",
+    "description": "Family Tree manager for Botble CMS"
+}

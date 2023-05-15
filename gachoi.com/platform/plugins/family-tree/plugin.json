@@ -1,5 +1,5 @@
 {
-    "name": "family-tree",
+    "name": "Family Tree",
     "namespace": "Botble\\FamilyTree\\",
     "provider": "Botble\\FamilyTree\\Providers\\FamilyTreeServiceProvider",
     "author": "Botble Technologies",

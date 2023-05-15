@@ -13,7 +13,7 @@
              data-owl-gap="30"
              data-owl-nav="true"
              data-owl-dots="true"
-             data-owl-item="4"
+             data-owl-item="3"
              data-owl-item-xs="2"
              data-owl-item-sm="2"
              data-owl-item-md="3"

@@ -198,7 +198,6 @@ class ProductController extends BaseController
         ProductVariationItemInterface $productVariationItemRepository,
         StoreProductTagService $storeProductTagService
     ) {
-
         $product = $this->productRepository->findOrFail($id);
 
         $product->status = $request->input('status');

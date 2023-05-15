@@ -61,10 +61,6 @@ class Product extends BaseModel
         'tax_id',
         'views',
         'stock_status',
-        'gender_id',
-        'mother_id',
-        'father_id',
-        'parent_id'
     ];
 
     /**
